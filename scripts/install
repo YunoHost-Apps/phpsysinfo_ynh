@@ -5,6 +5,8 @@ admin=$3
 is_public=$4
 
 # Save app settings
+# sudo yunohost app setting $app domain -v "$domain"
+# sudo yunohost app setting $app path -v "$path"
 # sudo yunohost app setting $app admin -v "$admin"
 # sudo yunohost app setting $app is_public -v "$is_public"
 
