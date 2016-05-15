@@ -1,0 +1,8 @@
+# Remove sources
+sudo rm -rf /var/www/phpsysinfo
+
+# Remove configuration files
+sudo rm -f /etc/nginx/conf.d/$domain.d/phpsysinfo.conf
+
+# Restart services
+sudo service nginx reload
