@@ -13,7 +13,7 @@
         "email": "duvalmickael@gmail.com"
     },
     "requirements": {
-        "yunohost": ">> 2.4.0.1"
+        "yunohost": ">> 2.4.0.4"
     },
     "multi_instance": "false",
     "services": [

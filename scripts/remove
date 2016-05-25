@@ -1,8 +1,20 @@
+# Retrieve app settings
+domain=$(ynh_app_setting_get "$app" domain)
+path=$(ynh_app_setting_get "$app" path)
+admin=$(ynh_app_setting_get "$app" admin)
+is_public=$(ynh_app_setting_get "$app" is_public)
+
 # Remove sources
 sudo rm -rf /var/www/phpsysinfo
 
 # Remove configuration files
 sudo rm -f /etc/nginx/conf.d/$domain.d/phpsysinfo.conf
+
+# If app is public, delete url to SSOWat
+if [[ $is_public -eq 1 ]];
+then
+  ynh_app_setting_delete "$app" skipped_uris
+fi
 
 # Restart services
 sudo service nginx reload
