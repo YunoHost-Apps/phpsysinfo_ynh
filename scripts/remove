@@ -21,11 +21,5 @@ sudo rm -rf /var/www/$app
 # Remove configuration files
 sudo rm -f /etc/nginx/conf.d/$domain.d/phpsysinfo.conf
 
-# If app is public, delete url to SSOWat
-if [[ $is_public -eq 1 ]];
-then
-  ynh_app_setting_delete "$app" skipped_uris
-fi
-
 # Restart services
 sudo service nginx reload

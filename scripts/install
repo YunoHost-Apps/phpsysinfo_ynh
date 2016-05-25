@@ -27,10 +27,10 @@ if [[ ! $? -eq 0 ]]; then
     exit 1
 fi
 
-# Copy files to the right place
+# Copy source files
 final_path=/var/www/$app
 sudo mkdir -p $final_path
-sudo cp -a ../sources/* $final_path
+sudo cp -a ../sources/. $final_path
 
 # Create configuration file
 cp $final_path/phpsysinfo.ini.new $final_path/phpsysinfo.ini
