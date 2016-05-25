@@ -4,7 +4,7 @@
     "packaging_format": 1,
     "description": {
         "en": "A customizable PHP script that displays information about your system nicely.",
-        "fr": "Un script PHP paramètrable qui affiche des informations sur votre système."
+        "fr": "Un script PHP paramÃ©trable qui affiche des informations sur votre systÃ¨me."
     },
     "url": "http://phpsysinfo.github.io/phpsysinfo/",
     "license": "free",
@@ -46,7 +46,7 @@
 				"type": "user",
                 "ask": {
                     "en": "Choose an admin user",
-                    "fr": "Choisissez l’administrateur"
+                    "fr": "Choisissez l'administrateur"
                 },
                 "example": "johndoe"
             },
