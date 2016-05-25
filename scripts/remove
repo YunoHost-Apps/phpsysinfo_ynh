@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Exit on command errors and treat unset variables as an error
+set -eu
+
+# Source YunoHost helpers
+. /usr/share/yunohost/helpers
+
 # Define app
 app=phpsysinfo
 
@@ -10,7 +16,7 @@ admin=$(ynh_app_setting_get "$app" admin)
 is_public=$(ynh_app_setting_get "$app" is_public)
 
 # Remove sources
-sudo rm -rf /var/www/phpsysinfo
+sudo rm -rf /var/www/$app
 
 # Remove configuration files
 sudo rm -f /etc/nginx/conf.d/$domain.d/phpsysinfo.conf

@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# Exit on command errors and treat unset variables as an error
+set -eu
+
 # Define app
 app=phpsysinfo
+
+# Source YunoHost helpers
+. /usr/share/yunohost/helpers
 
 # Retrieve arguments
 domain=$1
@@ -22,7 +28,7 @@ if [[ ! $? -eq 0 ]]; then
 fi
 
 # Copy files to the right place
-final_path=/var/www/phpsysinfo
+final_path=/var/www/$app
 sudo mkdir -p $final_path
 sudo cp -a ../sources/* $final_path
 
