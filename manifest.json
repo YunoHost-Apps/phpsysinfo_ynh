@@ -58,6 +58,24 @@
                 },
                 "choices": ["Yes", "No"],
                 "default": "No"
+            },
+			{
+                "name": "language",
+                "ask": {
+                    "en": "Default Language?",
+                    "fr": "Langue par défaut ?"
+                },
+                "choices": ["ast", "bg", "ca", "cz", "da", "de", "en", "es", "et", "fi", "fr", "gl", "gr", "he", "hu", "is", "it", "ja", "ko", "nl", "no", "pl", "pt-br", "pt-pt", "ro", "ru", "sk", "sl", "sv", "th", "tr", "tw", "uk", "zh"],
+                "default": "en"
+            },
+			{
+                "name": "display_mode",
+                "ask": {
+                    "en": "Display Mode?",
+                    "fr": "Mode d'affichage ?"
+                },
+                "choices": ["auto", "dynamic", "static", "bootstrap"],
+                "default": "bootstrap"
             }
         ]
     }

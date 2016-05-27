@@ -11,6 +11,8 @@ domain=$YNH_APP_ARG_DOMAIN
 path=$YNH_APP_ARG_PATH
 admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
+language=$YNH_APP_ARG_LANGUAGE
+display_mode=$YNH_APP_ARG_DISPLAY_MODE
 
 # Source YunoHost helpers
 . /usr/share/yunohost/helpers
@@ -20,6 +22,8 @@ ynh_app_setting_set "$app" domain "$domain"
 ynh_app_setting_set "$app" path "$path"
 ynh_app_setting_set "$app" admin "$admin"
 ynh_app_setting_set "$app" is_public "$is_public"
+ynh_app_setting_set "$app" language "$language"
+ynh_app_setting_set "$app" display_mode "$display_mode"
 
 # Check domain/path availability
 sudo yunohost app checkurl "${domain}${path}" -a "$app" \
@@ -30,8 +34,10 @@ final_path=/var/www/$app
 sudo mkdir -p $final_path
 sudo cp -a ../sources/. $final_path
 
-# Create configuration file
-cp $final_path/phpsysinfo.ini.new $final_path/phpsysinfo.ini
+# Modify Phpsysinfo configuration and copy it
+sed -i "s@YNH_DEFAULT_LANGUAGE@$language@g" ../conf/phpsysinfo.ini.conf
+sed -i "s@YNH_DISPLAY_MODE@$display_mode@g" ../conf/phpsysinfo.ini.conf
+sudo cp ../conf/phpsysinfo.ini $final_path
 
 # Set permissions to phpsysinfo directory
 sudo chown -R www-data: $final_path
