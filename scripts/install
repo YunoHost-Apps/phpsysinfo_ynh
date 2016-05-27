@@ -35,8 +35,8 @@ sudo mkdir -p $final_path
 sudo cp -a ../sources/. $final_path
 
 # Modify Phpsysinfo configuration and copy it
-sed -i "s@YNH_DEFAULT_LANGUAGE@$language@g" ../conf/phpsysinfo.ini.conf
-sed -i "s@YNH_DISPLAY_MODE@$display_mode@g" ../conf/phpsysinfo.ini.conf
+sed -i "s@YNH_DEFAULT_LANGUAGE@$language@g" ../conf/phpsysinfo.ini
+sed -i "s@YNH_DISPLAY_MODE@$display_mode@g" ../conf/phpsysinfo.ini
 sudo cp ../conf/phpsysinfo.ini $final_path
 
 # Set permissions to phpsysinfo directory
