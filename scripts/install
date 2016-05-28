@@ -9,7 +9,6 @@ app=phpsysinfo
 # Retrieve arguments
 domain=$YNH_APP_ARG_DOMAIN
 path=$YNH_APP_ARG_PATH
-admin=$YNH_APP_ARG_ADMIN
 is_public=$YNH_APP_ARG_IS_PUBLIC
 language=$YNH_APP_ARG_LANGUAGE
 display_mode=$YNH_APP_ARG_DISPLAY_MODE
@@ -20,7 +19,6 @@ display_mode=$YNH_APP_ARG_DISPLAY_MODE
 # Save app settings
 ynh_app_setting_set "$app" domain "$domain"
 ynh_app_setting_set "$app" path "$path"
-ynh_app_setting_set "$app" admin "$admin"
 ynh_app_setting_set "$app" is_public "$is_public"
 ynh_app_setting_set "$app" language "$language"
 ynh_app_setting_set "$app" display_mode "$display_mode"

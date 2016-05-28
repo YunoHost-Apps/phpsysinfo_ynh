@@ -12,7 +12,6 @@ app=phpsysinfo
 # Retrieve app settings
 domain=$(ynh_app_setting_get "$app" domain)
 path=$(ynh_app_setting_get "$app" path)
-admin=$(ynh_app_setting_get "$app" admin)
 is_public=$(ynh_app_setting_get "$app" is_public)
 language=$(ynh_app_setting_get "$app" language)
 display_mode=$(ynh_app_setting_get "$app" display_mode)
