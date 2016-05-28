@@ -35,7 +35,7 @@ sudo wget https://github.com/phpsysinfo/phpsysinfo/archive/v$version.tar.gz -O /
 sudo tar -xvf /tmp/phpsysinfo.tar.gz -C /tmp/
 final_path=/var/www/$app
 sudo mkdir -p $final_path
-sudo cp /tmp/phpsysinfo-$version/. $final_path
+sudo cp -a /tmp/phpsysinfo-$version/. $final_path
 
 # Modify Phpsysinfo configuration and copy it
 sed -i "s@YNH_DEFAULT_LANGUAGE@$language@g" ../conf/phpsysinfo.ini
