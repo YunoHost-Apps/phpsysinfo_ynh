@@ -13,6 +13,9 @@ is_public=$YNH_APP_ARG_IS_PUBLIC
 language=$YNH_APP_ARG_LANGUAGE
 display_mode=$YNH_APP_ARG_DISPLAY_MODE
 
+# Version of PhpSysInfo
+version=3.2.5
+
 # Source YunoHost helpers
 . /usr/share/yunohost/helpers
 
@@ -27,10 +30,12 @@ ynh_app_setting_set "$app" display_mode "$display_mode"
 sudo yunohost app checkurl "${domain}${path}" -a "$app" \
     || ynh_die "Path not available: ${domain}${path}"
 
-# Copy source files
+# Download source, untar and copy it
+sudo wget https://github.com/phpsysinfo/phpsysinfo/archive/v$version.tar.gz -O /tmp/phpsysinfo.tar.gz
+sudo tar -xvf /tmp/phpsysinfo.tar.gz -C /tmp/
 final_path=/var/www/$app
 sudo mkdir -p $final_path
-sudo cp -a ../sources/. $final_path
+sudo cp /tmp/phpsysinfo-$version/. $final_path
 
 # Modify Phpsysinfo configuration and copy it
 sed -i "s@YNH_DEFAULT_LANGUAGE@$language@g" ../conf/phpsysinfo.ini

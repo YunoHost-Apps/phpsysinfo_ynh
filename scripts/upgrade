@@ -16,13 +16,15 @@ is_public=$(ynh_app_setting_get "$app" is_public)
 language=$(ynh_app_setting_get "$app" language)
 display_mode=$(ynh_app_setting_get "$app" display_mode)
 
-# Remove trailing "/" for next commands
-path=${path%/}
+# Version of PhpSysInfo
+version=3.2.5
 
-# Copy source files
+# Download source, untar and copy it
+sudo wget https://github.com/phpsysinfo/phpsysinfo/archive/v$version.tar.gz -O /tmp/phpsysinfo.tar.gz
+sudo tar -xvf /tmp/phpsysinfo.tar.gz -C /tmp/
 final_path=/var/www/$app
 sudo mkdir -p $final_path
-sudo cp -a ../sources/. $final_path
+sudo cp /tmp/phpsysinfo-$version/. $final_path
 
 # Set permissions to app files
 # you may need to make some file and/or directory writeable by www-data (nginx user)
