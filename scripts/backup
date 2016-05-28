@@ -9,9 +9,11 @@ app=phpsysinfo
 # Source YunoHost helpers
 . /usr/share/yunohost/helpers
 
+# Retrieve app settings
+domain=$(ynh_app_setting_get "$app" domain)
+
 # Backup sources & data
 ynh_backup "/var/www/${app}" "sources"
 
 # Copy NGINX configuration
-domain=$(ynh_app_setting_get "$app" domain)
 ynh_backup "/etc/nginx/conf.d/${domain}.d/${app}.conf" "nginx.conf"
