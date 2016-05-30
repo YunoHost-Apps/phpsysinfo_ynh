@@ -5,6 +5,8 @@ set -eu
 
 # Define app
 app=phpsysinfo
+version=3.2.5
+md5_source=08875b31a9a7a662473d8cbe866059e7
 
 # Retrieve arguments
 domain=$YNH_APP_ARG_DOMAIN
@@ -12,9 +14,6 @@ path=$YNH_APP_ARG_PATH
 is_public=$YNH_APP_ARG_IS_PUBLIC
 language=$YNH_APP_ARG_LANGUAGE
 display_mode=$YNH_APP_ARG_DISPLAY_MODE
-
-# Version of PhpSysInfo
-version=3.2.5
 
 # Source YunoHost helpers
 . /usr/share/yunohost/helpers
@@ -30,8 +29,17 @@ ynh_app_setting_set "$app" display_mode "$display_mode"
 sudo yunohost app checkurl "${domain}${path}" -a "$app" \
     || ynh_die "Path not available: ${domain}${path}"
 
-# Download source, untar and copy it
+# Download source, check md5, untar, copy it
 sudo wget https://github.com/phpsysinfo/phpsysinfo/archive/v$version.tar.gz -O /tmp/phpsysinfo.tar.gz
+
+# Check md5
+md5_check=($(md5sum /tmp/phpsysinfo.tar.gz))
+if [ $md5_source != $md5_check ]
+then
+        ynh_die "the download is corrupted (md5 different)"
+fi
+
+# untar and copy it
 sudo tar -xvf /tmp/phpsysinfo.tar.gz -C /tmp/
 final_path=/var/www/$app
 sudo mkdir -p $final_path

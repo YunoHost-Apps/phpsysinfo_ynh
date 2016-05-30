@@ -3,8 +3,10 @@
 # Exit on command errors and treat unset variables as an error
 set -eu
 
-# See comments in install script
+# Define app
 app=phpsysinfo
+version=3.2.5
+md5_source=08875b31a9a7a662473d8cbe866059e7
 
 # Source YunoHost helpers
 . /usr/share/yunohost/helpers
@@ -16,18 +18,23 @@ is_public=$(ynh_app_setting_get "$app" is_public)
 language=$(ynh_app_setting_get "$app" language)
 display_mode=$(ynh_app_setting_get "$app" display_mode)
 
-# Version of PhpSysInfo
-version=3.2.5
-
-# Download source, untar and copy it
+# Download source, check md5, untar, copy it
 sudo wget https://github.com/phpsysinfo/phpsysinfo/archive/v$version.tar.gz -O /tmp/phpsysinfo.tar.gz
+
+# Check md5
+md5_check=($(md5sum /tmp/phpsysinfo.tar.gz))
+if [ $md5_source != $md5_check ]
+then
+        ynh_die "the download is corrupted (md5 different)"
+fi
+
+# untar and copy it
 sudo tar -xvf /tmp/phpsysinfo.tar.gz -C /tmp/
 final_path=/var/www/$app
 sudo mkdir -p $final_path
-sudo cp /tmp/phpsysinfo-$version/. $final_path
+sudo cp -a /tmp/phpsysinfo-$version/. $final_path
 
 # Set permissions to app files
-# you may need to make some file and/or directory writeable by www-data (nginx user)
 sudo chown -R root:root $final_path
 
 # Modify Nginx configuration file and copy it to Nginx conf directory

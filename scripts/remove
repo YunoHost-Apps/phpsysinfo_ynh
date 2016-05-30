@@ -13,7 +13,7 @@ domain=$(ynh_app_setting_get "$app" domain)
 sudo rm -rf /var/www/$app
 
 # Remove configuration files
-sudo rm -f /etc/nginx/conf.d/$domain.d/phpsysinfo.conf
+sudo rm -f /etc/nginx/conf.d/$domain.d/$app.conf
 
 # Restart services
 sudo service nginx reload
