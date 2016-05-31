@@ -1,7 +1,7 @@
 {
     "name": "PhpSysInfo",
     "id": "phpsysinfo",
-    "packaging_format": 2,
+    "packaging_format": 1,
     "description": {
         "en": "A customizable PHP script that displays information about your system nicely.",
         "fr": "Un script PHP paramétrable qui affiche des informations sur votre système."
