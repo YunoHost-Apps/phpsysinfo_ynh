@@ -1,7 +1,7 @@
 {
     "name": "PhpSysInfo",
     "id": "phpsysinfo",
-    "packaging_format": 1,
+    "packaging_format": 2,
     "description": {
         "en": "A customizable PHP script that displays information about your system nicely.",
         "fr": "Un script PHP paramétrable qui affiche des informations sur votre système."
@@ -13,7 +13,7 @@
         "email": "duvalmickael@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 2.4.0.5"
+        "yunohost": ">= 2.4.0.6"
     },
     "multi_instance": false,
     "services": [
