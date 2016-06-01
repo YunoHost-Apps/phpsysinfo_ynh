@@ -30,7 +30,7 @@ sudo yunohost app checkurl "${domain}${path}" -a "$app" \
     || ynh_die "Path not available: ${domain}${path}"
 
 # Download source, check md5, untar, copy it
-sudo wget https://github.com/phpsysinfo/phpsysinfo/archive/v$version.tar.gz -O /tmp/phpsysinfo.tar.gz
+sudo wget -q https://github.com/phpsysinfo/phpsysinfo/archive/v$version.tar.gz -O /tmp/phpsysinfo.tar.gz
 
 # Check md5
 md5_check=($(md5sum /tmp/phpsysinfo.tar.gz))
