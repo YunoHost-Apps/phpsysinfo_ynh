@@ -1,24 +1,25 @@
 {
-    "name": "PhpSysInfo",
     "id": "phpsysinfo",
+    "name": "PhpSysInfo",
     "packaging_format": 1,
     "description": {
         "en": "A customizable PHP script that displays information about your system nicely.",
         "fr": "Un script PHP paramétrable qui affiche des informations sur votre système."
     },
-    "url": "http://phpsysinfo.github.io/phpsysinfo/",
-    "license": "free",
+    "version": "3.3.2~ynh2",
+    "url": "https://github.com/inrepublica/phpsysinfo_ynh/",
+    "license": "GPL-3.0-only",
     "maintainer": {
         "name": "inrepublica",
         "email": "duvalmickael@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 2.4.0.6"
+        "yunohost": ">= 3.6.5"
     },
     "multi_instance": false,
     "services": [
         "nginx",
-        "php5-fpm"
+        "php7.0-fpm"
     ],
     "arguments": {
         "install" : [
@@ -43,12 +44,12 @@
             },
             {
                 "name": "is_public",
+                "type": "boolean",
                 "ask": {
-                    "en": "Is it a public WordPress site?",
+                    "en": "Is it a public website?",
                     "fr": "Est-ce un site public ?"
                 },
-                "choices": ["Yes", "No"],
-                "default": "No"
+                "default": false
             },
 			{
                 "name": "language",
@@ -67,6 +68,7 @@
                 },
                 "choices": ["auto", "dynamic", "static", "bootstrap"],
                 "default": "bootstrap"
+            }
             }
         ]
     }
