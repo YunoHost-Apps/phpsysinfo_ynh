@@ -86,6 +86,14 @@ ynh_replace_string --match_string="__LANGUAGE__" --replace_string="$language" --
 cp -r ../conf/phpsysinfo.ini "$final_path"
 
 #=================================================
+# CREATE DEDICATED USER
+#=================================================
+ynh_script_progression --message="Configuring system user..." --time --weight=1
+
+# Create a system user
+ynh_system_user_create --username=$app
+
+#=================================================
 # PHP-FPM CONFIGURATION
 #=================================================
 ynh_script_progression --message="Configuring php-fpm..." --weight=2

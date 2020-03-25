@@ -22,7 +22,6 @@ is_public=$(ynh_app_setting_get --app=$app --key=is_public)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 language=$(ynh_app_setting_get --app=$app --key=language)
 display_mode=$(ynh_app_setting_get --app=$app --key=display_mode)
-user=$(ynh_app_setting_get --app=$app --key=user)
 
 #=================================================
 # CHECK VERSION
@@ -101,6 +100,14 @@ then
     # Create a dedicated nginx config
     ynh_add_nginx_config
 fi
+
+#=================================================
+# CREATE DEDICATED USER
+#=================================================
+ynh_script_progression --message="Making sure dedicated system user exists..." --time --weight=1
+
+# Create a dedicated user (if not existing)
+ynh_system_user_create --username=$app
 
 #=================================================
 # PHP-FPM CONFIGURATION
