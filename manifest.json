@@ -45,6 +45,10 @@
             {
                 "name": "is_public",
                 "type": "boolean",
+				"help": {
+					"en": "Be careful, putting this application in public will expose some sensitive information.",
+					"fr": "Attention mettre cette application en publique exposera certaines informations sensibles."
+				},
                 "ask": {
                     "en": "Is it a public website?",
                     "fr": "Est-ce un site public ?"
@@ -53,6 +57,7 @@
             },
 			{
                 "name": "language",
+				"type": "string",
                 "ask": {
                     "en": "Default Language?",
                     "fr": "Langue par défaut ?"
@@ -62,6 +67,7 @@
             },
 			{
                 "name": "display_mode",
+				"type": "string",
                 "ask": {
                     "en": "Display Mode?",
                     "fr": "Mode d'affichage ?"
