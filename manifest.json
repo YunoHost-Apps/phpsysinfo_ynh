@@ -69,7 +69,6 @@
                 "choices": ["auto", "dynamic", "static", "bootstrap"],
                 "default": "bootstrap"
             }
-            }
         ]
     }
 }
