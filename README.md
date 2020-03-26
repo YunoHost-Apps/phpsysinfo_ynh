@@ -1,6 +1,6 @@
 # PHPSysInfo for Yunohost
 
-[![Integration level](https://dash.yunohost.org/integration/phpsysinfo_ynh.svg)](https://dash.yunohost.org/appci/app/phpsysinfo_ynh)  
+[![Integration level](https://dash.yunohost.org/appci/app/phpsysinfo_ynh.svg)](https://dash.yunohost.org/appci/app/phpsysinfo_ynh)  
 [![Install Custom Webapp with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=phpsysinfo_ynh)
 
 > *This package allow you to install PHPSysInfo quickly and simply on a YunoHost server.  
@@ -26,6 +26,7 @@ Edit `phpsysinfo.ini` in `/var/www/phpsysinfo/phpsysinfo.ini`.
 ## YunoHost specific features
 
 #### Multi-users support
+No support for multi-users.
 
 #### Supported architectures
 
@@ -49,7 +50,7 @@ Please do your pull request to the [testing branch](https://github.com/inrepubli
 
 To try the testing branch, please proceed like that.
 ```
-sudo yunohost app install https://github.com/inrepublica/phpsysinfo_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/phpsysinfo_ynh/tree/testing --debug
 or
-sudo yunohost app upgrade my_webapp -u https://github.com/inrepublica/phpsysinfo_ynh/tree/testing --debug
+sudo yunohost app upgrade my_webapp -u https://github.com/YunoHost-Apps/phpsysinfo_ynh/tree/testing --debug
 ```
