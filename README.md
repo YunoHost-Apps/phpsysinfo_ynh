@@ -26,7 +26,7 @@ Edit `phpsysinfo.ini` in `/var/www/YOURPATH/phpsysinfo.ini`.
 ## YunoHost specific features
 
 #### Multi-users support
-No support for multi-users.
+Yes.
 
 #### Supported architectures
 
