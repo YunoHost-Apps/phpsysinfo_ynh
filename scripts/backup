@@ -55,14 +55,6 @@ ynh_script_progression --message="Backing up php-fpm configuration..." --time --
 ynh_backup --src_path="/etc/php/7.0/fpm/pool.d/$app.conf"
 
 #=================================================
-# BACKUP FAIL2BAN CONFIGURATION
-#=================================================
-ynh_script_progression --message="Backing up fail2ban configuration..." --time --weight=1
-
-ynh_backup --src_path="/etc/fail2ban/jail.d/$app.conf"
-ynh_backup --src_path="/etc/fail2ban/filter.d/$app.conf"
-
-#=================================================
 # END OF SCRIPT
 #=================================================
 
