@@ -139,11 +139,11 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Reconfiguring Phpsysinfo..." --weight=11
 
-	ynh_replace_string --match_string="__DISPLAY_MODE__" --replace_string="$display_mode" --target_file=../conf/phpsysinfo.ini
-	ynh_replace_string --match_string="__LANGUAGE__" --replace_string="$language" --target_file=../conf/phpsysinfo.ini
+	ynh_replace_string --match_string="DEFAULT_LANG=\"en\"" --replace_string="DEFAULT_LANG=\"$language\"" --target_file="$final_path/phpsysinfo.ini.new"
+	ynh_replace_string --match_string="DEFAULT_DISPLAY_MODE=\"auto\"" --replace_string="DEFAULT_DISPLAY_MODE=\"$display_mode\"" --target_file="$final_path/phpsysinfo.ini.new"
 
-	# Copy files to the right place
-	cp -r ../conf/phpsysinfo.ini "$final_path"
+	### Rename phpsysinfo.ini.new in phpsysinfo.ini
+	mv "$final_path"/phpsysinfo.ini.new "$final_path"/phpsysinfo.ini
 fi
 
 #=================================================
