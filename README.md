@@ -19,7 +19,7 @@ A customizable PHP script that displays information about your system nicely.
 [Demo on NAS Synology](http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=synology)
 
 ## Configuration
-Edit `phpsysinfo.ini` in `/var/www/phpsysinfo/phpsysinfo.ini`.
+Edit `phpsysinfo.ini` in `/var/www/YOURPATH/phpsysinfo.ini`.
 
 ## Documentation
 
