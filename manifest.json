@@ -1,24 +1,25 @@
 {
-    "name": "PhpSysInfo",
     "id": "phpsysinfo",
+    "name": "PhpSysInfo",
     "packaging_format": 1,
     "description": {
         "en": "A customizable PHP script that displays information about your system nicely.",
         "fr": "Un script PHP paramétrable qui affiche des informations sur votre système."
     },
-    "url": "http://phpsysinfo.github.io/phpsysinfo/",
-    "license": "free",
+    "version": "3.3.2~ynh2",
+    "url": "https://github.com/inrepublica/phpsysinfo_ynh/",
+    "license": "GPL-3.0-only",
     "maintainer": {
         "name": "inrepublica",
         "email": "duvalmickael@gmail.com"
     },
     "requirements": {
-        "yunohost": ">= 2.4.0.6"
+        "yunohost": ">= 3.6.5"
     },
-    "multi_instance": false,
+    "multi_instance": true,
     "services": [
         "nginx",
-        "php5-fpm"
+        "php7.0-fpm"
     ],
     "arguments": {
         "install" : [
@@ -41,17 +42,31 @@
                 "example": "/phpsysinfo",
                 "default": "/phpsysinfo"
             },
+			{
+                "name": "admin",
+                "type": "user",
+                "ask": {
+                    "en": "Choose an admin user",
+                    "fr": "Choisissez l’administrateur"
+                },
+                "example": "johndoe"
+            },
             {
                 "name": "is_public",
+                "type": "boolean",
+				"help": {
+					"en": "Be careful, putting this application in public will expose some sensitive information.",
+					"fr": "Attention mettre cette application en publique exposera certaines informations sensibles."
+				},
                 "ask": {
-                    "en": "Is it a public WordPress site?",
+                    "en": "Is it a public website?",
                     "fr": "Est-ce un site public ?"
                 },
-                "choices": ["Yes", "No"],
-                "default": "No"
+                "default": false
             },
 			{
                 "name": "language",
+				"type": "string",
                 "ask": {
                     "en": "Default Language?",
                     "fr": "Langue par défaut ?"
@@ -61,12 +76,13 @@
             },
 			{
                 "name": "display_mode",
+				"type": "string",
                 "ask": {
                     "en": "Display Mode?",
                     "fr": "Mode d'affichage ?"
                 },
                 "choices": ["auto", "dynamic", "static", "bootstrap"],
-                "default": "bootstrap"
+                "default": "auto"
             }
         ]
     }

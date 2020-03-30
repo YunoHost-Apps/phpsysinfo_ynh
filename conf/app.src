@@ -1,0 +1,6 @@
+SOURCE_URL=https://github.com/phpsysinfo/phpsysinfo/archive/v3.3.2.tar.gz
+SOURCE_SUM=C13A3F12DC7E5FBC71A7B12645F2F08D
+SOURCE_SUM_PRG=md5sum
+ARCH_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=true
+SOURCE_FILENAME=
