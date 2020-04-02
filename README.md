@@ -1,6 +1,7 @@
 # PHPSysInfo for Yunohost
 
 [![Integration level](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
+
 [![Install Custom Webapp with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=phpsysinfo)
 
 > *This package allow you to install PHPSysInfo quickly and simply on a YunoHost server.  
