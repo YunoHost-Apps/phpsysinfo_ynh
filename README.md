@@ -1,6 +1,7 @@
 # PHPSysInfo for Yunohost
 
-[![Integration level](https://dash.yunohost.org/appci/app/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo)  
+[![Integration level](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
+
 [![Install Custom Webapp with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=phpsysinfo)
 
 > *This package allow you to install PHPSysInfo quickly and simply on a YunoHost server.  
@@ -33,7 +34,6 @@ No multi-users in this app. Simply a web page.
 
 * x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/phpsysinfo%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/phpsysinfo/)
 * ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/phpsysinfo%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/phpsysinfo/)
-* Jessie x86-64b - [![Build Status](https://ci-stretch.nohost.me/ci/logs/phpsysinfo%20%28Apps%29.svg)](https://ci-stretch.nohost.me/ci/apps/phpsysinfo/)
 
 ## Limitations
 
