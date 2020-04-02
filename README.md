@@ -1,7 +1,7 @@
 # PHPSysInfo for Yunohost
 
-[![Integration level](https://dash.yunohost.org/appci/app/phpsysinfo_ynh.svg)](https://dash.yunohost.org/appci/app/phpsysinfo_ynh)  
-[![Install Custom Webapp with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=phpsysinfo_ynh)
+[![Integration level](https://dash.yunohost.org/appci/app/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo)  
+[![Install Custom Webapp with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=phpsysinfo)
 
 > *This package allow you to install PHPSysInfo quickly and simply on a YunoHost server.  
 If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to know how to install and enjoy it.*
@@ -11,6 +11,7 @@ If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to
 A customizable PHP script that displays information about your system nicely.
 
 **Shipped version:** 3.3.2
+**License:** [GNU General Public License v2.0](https://github.com/phpsysinfo/phpsysinfo/blob/master/COPYING)
 
 ## Screenshots
 ![screenshot phpsyinfo](https://a.fsdn.com/con/app/proj/phpsysinfo/screenshots/294411.jpg/max/max/1 "phpsysinfo screenshot")
@@ -30,9 +31,9 @@ No multi-users in this app. Simply a web page.
 
 #### Supported architectures
 
-* x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/phpsysinfo_ynh%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/phpsysinfo_ynh/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/phpsysinfo_ynh%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/phpsysinfo_ynh/)
-* Jessie x86-64b - [![Build Status](https://ci-stretch.nohost.me/ci/logs/phpsysinfo_ynh%20%28Apps%29.svg)](https://ci-stretch.nohost.me/ci/apps/phpsysinfo_ynh/)
+* x86-64b - [![Build Status](https://ci-apps.yunohost.org/ci/logs/phpsysinfo%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/phpsysinfo/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/phpsysinfo%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/phpsysinfo/)
+* Jessie x86-64b - [![Build Status](https://ci-stretch.nohost.me/ci/logs/phpsysinfo%20%28Apps%29.svg)](https://ci-stretch.nohost.me/ci/apps/phpsysinfo/)
 
 ## Limitations
 
@@ -46,7 +47,7 @@ Developers info
 ----------------
 
 **Only if you want to use a testing branch for coding, instead of merging directly into master.**
-Please do your pull request to the [testing branch](https://github.com/inrepublica/phpsysinfo_ynh/tree/testing).
+Please do your pull request to the [testing branch](https://github.com/YunoHost-Apps/phpsysinfo_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
 ```
