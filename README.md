@@ -11,7 +11,7 @@ If you don't have YunoHost, please see [here](https://yunohost.org/#/install) to
 
 A customizable PHP script that displays information about your system nicely.
 
-**Shipped version:** 3.3.2
+**Shipped version:** 3.3.4
 **License:** [GNU General Public License v2.0](https://github.com/phpsysinfo/phpsysinfo/blob/master/COPYING)
 
 ## Screenshots
