@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/phpsysinfo/phpsysinfo/archive/refs/tags/v3.4.0.tar.gz
-SOURCE_SUM=38c1cb2ce76c91687b5593695affdcad9761eee436e03d130ddbc036f5927176
+SOURCE_URL=https://github.com/phpsysinfo/phpsysinfo/archive/refs/tags/v3.4.1.tar.gz
+SOURCE_SUM=377bafea4dc4f1f705cd35df5b95e55034045ab3e7971dc934d1f599157dc3aa
 SOURCE_SUM_PRG=sha256sum
 ARCH_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true

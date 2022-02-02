@@ -14,7 +14,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 A customizable PHP script that displays information about your system nicely.
 
 
-**Version incluse :** 3.4.0~ynh1
+**Version incluse :** 3.4.1~ynh1
 
 **Démo :** http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian
 
