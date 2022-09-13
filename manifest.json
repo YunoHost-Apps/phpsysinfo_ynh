@@ -6,7 +6,7 @@
         "en": "Customizable PHP script that displays information about your system nicely",
         "fr": "Un script PHP paramétrable qui affiche des informations sur votre système"
     },
-    "version": "3.4.1~ynh1",
+    "version": "3.4.2~ynh1",
     "url": "https://phpsysinfo.github.io/phpsysinfo/",
     "upstream": {
         "license": "GPL-3.0-only",
