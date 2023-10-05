@@ -27,12 +27,6 @@ A customizable PHP script that displays information about your system nicely.
 
 ![Screenshot of PhpSysInfo](./doc/screenshots/screenshot.png)
 
-## Disclaimers / important information
-
-## Configuration
-
-Edit `phpsysinfo.ini` in `/var/www/YOURPATH/phpsysinfo.ini`.
-
 ## Documentation and resources
 
 * Official app website: <https://phpsysinfo.github.io/phpsysinfo/>
