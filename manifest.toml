@@ -41,7 +41,7 @@ ram.runtime = "50M"
     help.en = "Be careful, putting this application in public will expose some sensitive information."
     help.fr = "Attention mettre cette application en publique exposera certaines informations sensibles."
     type = "group"
-    default = false
+    default = "admins"
 
     [install.language]
     ask.en = "Choose the application language"
