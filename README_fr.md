@@ -5,40 +5,33 @@ It shall NOT be edited by hand.
 
 # PhpSysInfo pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
+
 [![Installer PhpSysInfo avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpsysinfo)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer PhpSysInfo rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer PhpSysInfo rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 A customizable PHP script that displays information about your system nicely.
 
 
-**Version incluse :** 3.4.2~ynh1
-
+**Version incluse :** 3.4.3~ynh1
 
 **Démo :** http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de PhpSysInfo](./doc/screenshots/screenshot.png)
-
-## Avertissements / informations importantes
-
-## Configuration
-
-Edit `phpsysinfo.ini` in `/var/www/YOURPATH/phpsysinfo.ini`.
+![Capture d’écran de PhpSysInfo](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://phpsysinfo.github.io/phpsysinfo/>
-* Documentation officielle de l'admin : <https://phpsysinfo.github.io/phpsysinfo/>
-* Dépôt de code officiel de l'app : <https://github.com/phpsysinfo/phpsysinfo/>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_phpsysinfo>
+* Site officiel de l’app : <https://phpsysinfo.github.io/phpsysinfo/>
+* Documentation officielle de l’admin : <https://phpsysinfo.github.io/phpsysinfo/>
+* Dépôt de code officiel de l’app : <https://github.com/phpsysinfo/phpsysinfo/>
 * Signaler un bug : <https://github.com/YunoHost-Apps/phpsysinfo_ynh/issues>
 
 ## Informations pour les développeurs
@@ -53,4 +46,4 @@ ou
 sudo yunohost app upgrade phpsysinfo -u https://github.com/YunoHost-Apps/phpsysinfo_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
