@@ -3,7 +3,7 @@ packaging_format = 2
 id = "phpsysinfo"
 name = "PhpSysInfo"
 description.en = "Customizable PHP script that displays information about your system nicely"
-description.fr = "Un script PHP paramétrable qui affiche des informations sur votre système"
+description.fr = "Script PHP paramétrable qui affiche des informations sur votre système"
 
 version = "3.4.3~ynh1"
 
