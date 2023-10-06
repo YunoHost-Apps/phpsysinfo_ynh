@@ -19,19 +19,13 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 A customizable PHP script that displays information about your system nicely.
 
 
-**Shipped version:** 3.4.2~ynh1
+**Shipped version:** 3.4.3~ynh1
 
 **Demo:** http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian
 
 ## Screenshots
 
 ![Screenshot of PhpSysInfo](./doc/screenshots/screenshot.png)
-
-## Disclaimers / important information
-
-## Configuration
-
-Edit `phpsysinfo.ini` in `/var/www/YOURPATH/phpsysinfo.ini`.
 
 ## Documentation and resources
 
