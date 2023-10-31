@@ -32,6 +32,7 @@ A customizable PHP script that displays information about your system nicely.
 * Official app website: <https://phpsysinfo.github.io/phpsysinfo/>
 * Official admin documentation: <https://phpsysinfo.github.io/phpsysinfo/>
 * Upstream app code repository: <https://github.com/phpsysinfo/phpsysinfo/>
+* YunoHost Store: <https://apps.yunohost.org/app/phpsysinfo>
 * Report a bug: <https://github.com/YunoHost-Apps/phpsysinfo_ynh/issues>
 
 ## Developer info
