@@ -71,5 +71,5 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.2-fpm"
+    packages = ["php8.2-fpm", "php8.2-xml" ]
     
