@@ -5,7 +5,7 @@ NON debe editarse manualmente.
 
 # PhpSysInfo para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpsysinfo/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
 
 [![Instalar PhpSysInfo con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpsysinfo)
 
