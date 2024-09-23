@@ -19,7 +19,7 @@ No se debe editar a mano.
 A customizable PHP script that displays information about your system nicely.
 
 
-**Versión actual:** 3.4.3~ynh1
+**Versión actual:** 3.4.4~ynh1
 
 **Demo:** <http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian>
 
@@ -37,7 +37,7 @@ A customizable PHP script that displays information about your system nicely.
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/phpsysinfo_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/phpsysinfo_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
