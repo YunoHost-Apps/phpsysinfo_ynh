@@ -61,7 +61,7 @@ ram.runtime = "50M"
 [resources]
         [resources.sources.main]
         url = "https://github.com/phpsysinfo/phpsysinfo/archive/refs/tags/v3.4.4.tar.gz"
-        sha256 = "0d4a78979370330a4b3d28ab69092a730898659270aa2dce9d1b6db5fbccdb21"
+        sha256 = "fab71f09a09881c7fab78f452b4da907e306a5f34069cdeb94f7d1adcbcfac0e"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
