@@ -1,71 +1,48 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# CHECK VERSION
-#=================================================
-
-upgrade_type=$(ynh_check_app_version_changed)
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
+ynh_script_progression "Upgrading source files..."
 
-if [ "$upgrade_type" == "UPGRADE_APP" ]
-then
-	ynh_script_progression --message="Upgrading source files..."
-
-	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir"
-fi
-
-chmod -R o-rwx "$install_dir"
-chown -R $app:www-data "$install_dir"
+ynh_setup_source --dest_dir="$install_dir"
 
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Upgrading NGINX web server configuration..."
+ynh_script_progression "Upgrading NGINX web server configuration..."
 
-# Create a dedicated NGINX config
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-# Create a dedicated PHP-FPM config
-ynh_add_fpm_config
+ynh_config_add_phpfpm
 
-#=================================================
-# SPECIFIC UPGRADE
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
-ynh_script_progression --message="Updating a configuration file..."
+ynh_script_progression "Updating configuration..."
 
-ynh_backup_if_checksum_is_different --file="$install_dir/phpsysinfo.ini"
+ynh_backup_if_checksum_is_different "$install_dir/phpsysinfo.ini"
 
-if [ "$upgrade_type" == "UPGRADE_APP" ]
+# FIXME: this is still supported but the recommendation is now to *always* re-setup the app sources wether or not the upstream sources changed
+if ynh_app_upstream_version_changed
 then
-	ynh_script_progression --message="Reconfiguring Phpsysinfo..." --weight=11
+	ynh_script_progression "Reconfiguring Phpsysinfo..."
 
-	ynh_replace_string --match_string="DEFAULT_LANG=\"en\"" --replace_string="DEFAULT_LANG=\"$language\"" --target_file="$install_dir/phpsysinfo.ini.new"
-	ynh_replace_string --match_string="DEFAULT_DISPLAY_MODE=\"auto\"" --replace_string="DEFAULT_DISPLAY_MODE=\"$display_mode\"" --target_file="$install_dir/phpsysinfo.ini.new"
+	ynh_replace --match="DEFAULT_LANG=\"en\"" --replace="DEFAULT_LANG=\"$language\"" --file="$install_dir/phpsysinfo.ini.new"
+	ynh_replace --match="DEFAULT_DISPLAY_MODE=\"auto\"" --replace="DEFAULT_DISPLAY_MODE=\"$display_mode\"" --file="$install_dir/phpsysinfo.ini.new"
 
 	### Rename phpsysinfo.ini.new in phpsysinfo.ini
 	mv "$install_dir"/phpsysinfo.ini.new "$install_dir"/phpsysinfo.ini
 fi
 
 # Recalculate and store the checksum of the file for the next upgrade.
-ynh_store_file_checksum --file="$install_dir/phpsysinfo.ini"
+ynh_store_file_checksum "$install_dir/phpsysinfo.ini"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of $app completed"
+ynh_script_progression "Upgrade of $app completed"

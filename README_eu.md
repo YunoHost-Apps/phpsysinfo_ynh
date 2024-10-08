@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # PhpSysInfo YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpsysinfo/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
 
 [![Instalatu PhpSysInfo YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpsysinfo)
 
@@ -19,7 +19,7 @@ EZ editatu eskuz.
 A customizable PHP script that displays information about your system nicely.
 
 
-**Paketatutako bertsioa:** 3.4.3~ynh1
+**Paketatutako bertsioa:** 3.4.4~ynh1
 
 **Demoa:** <http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian>
 

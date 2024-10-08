@@ -5,7 +5,7 @@ name = "PhpSysInfo"
 description.en = "Customizable PHP script that displays information about your system nicely"
 description.fr = "Script PHP paramétrable qui affiche des informations sur votre système"
 
-version = "3.4.3~ynh1"
+version = "3.4.4~ynh1"
 
 maintainers = ["inrepublica"]
 
@@ -17,7 +17,8 @@ admindoc = "https://phpsysinfo.github.io/phpsysinfo/"
 code = "https://github.com/phpsysinfo/phpsysinfo/"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 ldap = false
@@ -59,17 +60,17 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/phpsysinfo/phpsysinfo/archive/refs/tags/v3.4.3.tar.gz"
-        sha256 = "ffa34cb88f85a440a41d04969e9f3dc8686feb89a31f99940c73ca146d05d99c"
+        url = "https://github.com/phpsysinfo/phpsysinfo/archive/refs/tags/v3.4.4.tar.gz"
+        sha256 = "fab71f09a09881c7fab78f452b4da907e306a5f34069cdeb94f7d1adcbcfac0e"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
     [resources.install_dir]
+    group = "www-data:r-x"
 
     [resources.permissions]
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.2-fpm"
-    
+    packages = ["php8.3-fpm", "php8.3-xml"]

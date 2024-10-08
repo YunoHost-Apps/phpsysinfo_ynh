@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # PhpSysInfo for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpsysinfo/) ![Working status](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
 
 [![Install PhpSysInfo with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpsysinfo)
 
@@ -19,7 +19,7 @@ It shall NOT be edited by hand.
 A customizable PHP script that displays information about your system nicely.
 
 
-**Shipped version:** 3.4.3~ynh1
+**Shipped version:** 3.4.4~ynh1
 
 **Demo:** <http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian>
 

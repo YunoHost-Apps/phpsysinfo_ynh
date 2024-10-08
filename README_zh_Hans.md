@@ -5,7 +5,7 @@
 
 # YunoHost 上的 PhpSysInfo
 
-[![集成程度](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://dash.yunohost.org/appci/app/phpsysinfo) ![工作状态](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/phpsysinfo.svg)](https://ci-apps.yunohost.org/ci/apps/phpsysinfo/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/phpsysinfo.maintain.svg)
 
 [![使用 YunoHost 安装 PhpSysInfo](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=phpsysinfo)
 
@@ -19,7 +19,7 @@
 A customizable PHP script that displays information about your system nicely.
 
 
-**分发版本：** 3.4.3~ynh1
+**分发版本：** 3.4.4~ynh1
 
 **演示：** <http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian>
 
