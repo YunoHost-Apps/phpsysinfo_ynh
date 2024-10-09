@@ -1,3 +1,3 @@
 ## Configuration
 
-Edit `phpsysinfo.ini` in `/var/www/YOURPATH/phpsysinfo.ini`.
+Edit `phpsysinfo.ini` in `__INSTALL_DIR__/phpsysinfo.ini`.
