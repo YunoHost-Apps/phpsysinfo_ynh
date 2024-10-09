@@ -26,17 +26,11 @@ ynh_script_progression "Updating configuration..."
 
 ynh_backup_if_checksum_is_different "$install_dir/phpsysinfo.ini"
 
-# FIXME: this is still supported but the recommendation is now to *always* re-setup the app sources wether or not the upstream sources changed
-if ynh_app_upstream_version_changed
-then
-	ynh_script_progression "Reconfiguring Phpsysinfo..."
+ynh_replace --match="DEFAULT_LANG=\"en\"" --replace="DEFAULT_LANG=\"$language\"" --file="$install_dir/phpsysinfo.ini.new"
+ynh_replace --match="DEFAULT_DISPLAY_MODE=\"auto\"" --replace="DEFAULT_DISPLAY_MODE=\"$display_mode\"" --file="$install_dir/phpsysinfo.ini.new"
 
-	ynh_replace --match="DEFAULT_LANG=\"en\"" --replace="DEFAULT_LANG=\"$language\"" --file="$install_dir/phpsysinfo.ini.new"
-	ynh_replace --match="DEFAULT_DISPLAY_MODE=\"auto\"" --replace="DEFAULT_DISPLAY_MODE=\"$display_mode\"" --file="$install_dir/phpsysinfo.ini.new"
-
-	### Rename phpsysinfo.ini.new in phpsysinfo.ini
-	mv "$install_dir"/phpsysinfo.ini.new "$install_dir"/phpsysinfo.ini
-fi
+### Rename phpsysinfo.ini.new in phpsysinfo.ini
+mv "$install_dir"/phpsysinfo.ini.new "$install_dir"/phpsysinfo.ini
 
 # Recalculate and store the checksum of the file for the next upgrade.
 ynh_store_file_checksum "$install_dir/phpsysinfo.ini"
