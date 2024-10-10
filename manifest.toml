@@ -5,7 +5,7 @@ name = "PhpSysInfo"
 description.en = "Customizable PHP script that displays information about your system nicely"
 description.fr = "Script PHP paramétrable qui affiche des informations sur votre système"
 
-version = "3.4.4~ynh1"
+version = "3.4.4~ynh2"
 
 maintainers = ["inrepublica"]
 
