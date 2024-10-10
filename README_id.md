@@ -19,7 +19,7 @@ Ini TIDAK boleh diedit dengan tangan.
 A customizable PHP script that displays information about your system nicely.
 
 
-**Versi terkirim:** 3.4.4~ynh1
+**Versi terkirim:** 3.4.4~ynh2
 
 **Demo:** <http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian>
 

@@ -19,7 +19,7 @@
 A customizable PHP script that displays information about your system nicely.
 
 
-**Поставляемая версия:** 3.4.4~ynh1
+**Поставляемая версия:** 3.4.4~ynh2
 
 **Демо-версия:** <http://phpsysinfo.sourceforge.net/multi/index.php?disp=bootstrap&xml=raspbian>
 
