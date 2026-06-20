@@ -5,7 +5,7 @@ name = "PhpSysInfo"
 description.en = "Customizable PHP script that displays information about your system nicely"
 description.fr = "Script PHP paramétrable qui affiche des informations sur votre système"
 
-version = "3.4.5~ynh1"
+version = "3.4.6~ynh1"
 
 maintainers = ["inrepublica"]
 
@@ -62,8 +62,8 @@ ram.runtime = "50M"
 
 [resources]
         [resources.sources.main]
-        url = "https://github.com/phpsysinfo/phpsysinfo/archive/refs/tags/v3.4.5.tar.gz"
-        sha256 = "e2154b75215e7b1188ecca5f0a6d4f0c72abc94517b93ff95a4f9a98a253d69d"
+        url = "https://github.com/phpsysinfo/phpsysinfo/archive/refs/tags/v3.4.6.tar.gz"
+        sha256 = "1e54faaab1940a444e439c867e2ceed4102f7f37bd39612fefd323a65319f7a8"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
